@@ -14,7 +14,7 @@ def limpa_tela():
         
     # Mac/Linux    
     else:
-        _ system("clear")
+        _ = system("clear")
 
 # Função do jogo
 
@@ -49,32 +49,27 @@ def jogo():
         
         tentativa = input("\n Digite uma letra: ").lower()
         
-    # Condicional 1
-    if tentativa in palavra:
-        index = 0
-        for letra in palavra:
-            if tentativa == letra:
-                letras_descobertas[index] = letra
-            index += 1
-    else:
-        chances -= 1
-        letras_erradas.append(tentativa)
-    
-    # Condicional 2
-    
-    if "_" not in letras_descobertas:
-        print("\nVocê venceu, a palavra era:", palavra)
-        break
-    
-    # Condicional 3
-    
-    if "_" not in letras_descobertas:
-        print("\n Você perdeu, a palavra era: ", palavra)
+        # Condicional 1
+        if tentativa in palavra:
+            index = 0
+            for letra in palavra:
+                if tentativa == letra:
+                    letras_descobertas[index] = letra
+                index += 1
+        else:
+            chances -= 1
+            letras_erradas.append(tentativa)
         
-# Bloco main
+        # Condicional 2
+        if "_" not in letras_descobertas:
+            print("\nVocê venceu, a palavra era:", palavra)
+            break
 
+        # Condicional 3
+    if "_" in letras_descobertas:
+        print("\n Você perdeu, a palavra era: ", palavra)   
+      
+# Bloco main
 if __name__ == "__main__":
     jogo()
-        
-    
     
