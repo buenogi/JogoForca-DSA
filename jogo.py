@@ -1,4 +1,4 @@
-# Projeto 1 - Desenvolvimento de um Jogo em Python - Versão 1
+# Projeto 1 - Desenvolvimento de um jogo da forca em Python - Versão 1
 
 # Importações
 
